@@ -25,5 +25,11 @@ int main(int argc, const char * argv[]) {
     deleValueEqualX(list, 3);
     printElemt(list);
     
+    for(int i = 0; i < 4; i++) list.elem[i] = i;
+    list.length = 4;
+    deleFromSToTinSortArray(list, 1, 3);
+    printElemt(list);
+    
+    
     return 0;
 }

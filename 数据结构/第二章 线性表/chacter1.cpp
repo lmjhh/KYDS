@@ -52,17 +52,22 @@ void deleValueEqualX(SqList &L,int x){
 // 从有序顺序表中删除，s-t的数 若s,t不合理，表为空 退出
 void deleFromSToTinSortArray(SqList &L,int s,int t){
     int startIndex = 0, endIndex = 0;
+    if(L.elem[0] >= t || L.elem[L.length - 1] <= s) return;
     for(int i = 0; i < L.length; i++){
         if(L.elem[i] > s) {
             startIndex = i;
             break;
         }
     }
-    for(int i = 0; i < L.length; i++){
-        if(L.elem[i] > t) {
-            endIndex = i;
-            break;
+    if(L.elem[L.length - 1] < t){
+        for(int i = 0; i < L.length; i++){
+            if(L.elem[i] >= t) {
+                endIndex = i;
+                break;
+            }
         }
+    }else if(L.elem[L.length - 1] >= t){
+      endIndex = L.length - 1;
     }
     for(int i = startIndex,j = endIndex; j < L.length; j++) L.elem[i] = L.elem[j];
     L.length = L.length - (endIndex - startIndex);

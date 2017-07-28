@@ -24,6 +24,7 @@ typedef struct {
 int deleminElemt(SqList &L);
 void reverseList(SqList &L);
 void deleValueEqualX(SqList &L,int x);
+void deleFromSToTinSortArray(SqList &L,int s,int t);
 
 //通用实现
 void printElemt(SqList &L);
