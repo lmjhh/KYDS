@@ -25,6 +25,14 @@ int deleminElemt(SqList &L);
 void reverseList(SqList &L);
 void deleValueEqualX(SqList &L,int x);
 void deleFromSToTinSortArray(SqList &L,int s,int t);
+void deleSToTFormArray(SqList &L,int s,int t);
+void deleRepeatElemFromSortArray(SqList &L);
+SqList composeTwoArray(SqList &L,SqList &M);
+void swapSqlistAandB(SqList &L,int n,int m);
+void searchXFromSortArray(SqList &L,int x);
+void leftLoopPindex(SqList &L,int p);
+int searchMidNumFromTwoEqualArray(SqList &L,SqList &M);
+int searchMainEleminArray(SqList &L);
 
 //通用实现
 void printElemt(SqList &L);
