@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B21AC621F29EF8E0044B013 /* chacter1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AC611F29EF8E0044B013 /* chacter1.cpp */; };
+		4B21AC621F29EF8E0044B013 /* excise1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AC611F29EF8E0044B013 /* excise1.cpp */; };
 		4B21AC661F29F36D0044B013 /* SQList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AC651F29F36D0044B013 /* SQList.cpp */; };
+		4B34A8001F3471A500D6A796 /* excise2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B34A7FF1F3471A500D6A796 /* excise2.cpp */; };
 		4B4C57AF1E9F7778004D5EFC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C57AE1E9F7778004D5EFC /* main.cpp */; };
 		4B4C57B81E9F77D8004D5EFC /* KMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C57B71E9F77D8004D5EFC /* KMP.cpp */; };
 /* End PBXBuildFile section */
@@ -27,8 +28,9 @@
 
 /* Begin PBXFileReference section */
 		4B21AC601F29E8BD0044B013 /* SQListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQListHeader.h; sourceTree = "<group>"; };
-		4B21AC611F29EF8E0044B013 /* chacter1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chacter1.cpp; sourceTree = "<group>"; };
+		4B21AC611F29EF8E0044B013 /* excise1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = excise1.cpp; sourceTree = "<group>"; };
 		4B21AC651F29F36D0044B013 /* SQList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SQList.cpp; sourceTree = "<group>"; };
+		4B34A7FF1F3471A500D6A796 /* excise2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = excise2.cpp; sourceTree = "<group>"; };
 		4B4C57AB1E9F7778004D5EFC /* 数据结构 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "数据结构"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4C57AE1E9F7778004D5EFC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4B4C57B61E9F77C6004D5EFC /* KMP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMP.h; sourceTree = "<group>"; };
@@ -51,7 +53,8 @@
 			children = (
 				4B21AC601F29E8BD0044B013 /* SQListHeader.h */,
 				4B21AC651F29F36D0044B013 /* SQList.cpp */,
-				4B21AC611F29EF8E0044B013 /* chacter1.cpp */,
+				4B21AC611F29EF8E0044B013 /* excise1.cpp */,
+				4B34A7FF1F3471A500D6A796 /* excise2.cpp */,
 			);
 			path = "第二章 线性表";
 			sourceTree = "<group>";
@@ -150,8 +153,9 @@
 			files = (
 				4B4C57B81E9F77D8004D5EFC /* KMP.cpp in Sources */,
 				4B21AC661F29F36D0044B013 /* SQList.cpp in Sources */,
+				4B34A8001F3471A500D6A796 /* excise2.cpp in Sources */,
 				4B4C57AF1E9F7778004D5EFC /* main.cpp in Sources */,
-				4B21AC621F29EF8E0044B013 /* chacter1.cpp in Sources */,
+				4B21AC621F29EF8E0044B013 /* excise1.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

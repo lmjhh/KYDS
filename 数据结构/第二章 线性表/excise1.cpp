@@ -1,5 +1,5 @@
 //
-//  exp1.cpp
+//  excise1.cpp
 //  数据结构
 //
 //  Created by 黄人煌 on 2017/7/27.

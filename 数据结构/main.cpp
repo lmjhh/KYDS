@@ -7,14 +7,16 @@
 //
 #include "SQListHeader.h"
 
-void sqlistfun();
+void sqlistFun();
+void linkListFun();
 
 int main(int argc, const char * argv[]) {
-    sqlistfun();
+//    sqlistFun();
+    linkListFun();
 }
 
 #pragma mark 第二章线性表
-void sqlistfun(){
+void sqlistFun(){
     SqList list;
     list.elem = new int[4];
     for(int i = 0; i < 4; i++) list.elem[i] = i;
@@ -119,4 +121,86 @@ void sqlistfun(){
     L.elem[3] = 3;L.elem[4] = 5;
     L.elem[5] = 1;L.elem[6] = 5; L.elem[7] = 7;
     cout<<searchMainEleminArray(L) <<endl;
+}
+
+void linkListFun(){
+    LinkList L;
+    cout << "2.1-----------------" <<endl;
+    initLinkList(L, false);
+    vector<int> array = {1,2,2,3,2,4,5};
+    insertArrayIntoList(array, L, false);
+    printElemt(L,false);
+    recursionDeleteValueEqualX(L, 2);
+    printElemt(L,false);
+    cout << "2.2-----------------" <<endl;
+    array = {1,2,2,3,2,4,5};
+    initLinkList(L, true);
+    insertArrayIntoList(array, L, true);
+    printElemt(L, true);
+    DeleteEqualX(L, 2);
+    printElemt(L, true);
+    cout << "2.3-----------------" <<endl;
+    array = {1,2,3,4,5,6,7};
+    initLinkList(L, true);
+    insertArrayIntoList(array, L, true);
+    printElemt(L, true);
+    reversePrintElemt(L->next);
+    cout<<"end"<<endl;
+    cout << "2.4-----------------" <<endl;
+    array = {1,2,2,3,2,4,5};
+    initLinkList(L, true);
+    insertArrayIntoList(array, L, true);
+    printElemt(L, true);
+    deleteMinElemt(L);
+    printElemt(L, true);
+    cout << "2.5-----------------" <<endl;
+    array = {1,2,3,4,5};
+    initLinkList(L, true);
+    insertArrayIntoList(array, L, true);
+    printElemt(L, true);
+    reverseList(L);
+    printElemt(L, true);
+    cout << "2.6-----------------" <<endl;
+    array = {5,4,3,2,1};
+    initLinkList(L, true);
+    insertArrayIntoList(array, L, true);
+    printElemt(L, true);
+    sortList(L);
+    printElemt(L, true);
+    cout << "2.7-----------------" <<endl;
+    array = {2,4,3,7,5};
+    initLinkList(L, true);
+    insertArrayIntoList(array, L, true);
+    printElemt(L, true);
+    deleteFromXToY(L, 2, 5);
+    printElemt(L, true);
+    cout << "2.8-----------------" <<endl;
+    array = {2,4,3,7,5};
+    vector<int> array2 = {1,3,5,7,9,11,13};
+    initLinkList(L, true);
+    LinkList M;
+    initLinkList(M, true);
+    insertArrayIntoList(array, L, true);
+    insertArrayIntoList(array2, M, true);
+    printElemt(L, true);
+    printElemt(M, true);
+    serchEqualElemt(L, M);
+    cout << "2.9-----------------" <<endl;
+    array = {2,4,3,7,5};
+    initLinkList(L, true);
+    insertArrayIntoList(array, L, true);
+    printElemt(L, true);
+    ascendingInputList(L);
+    cout << "2.10-----------------" <<endl;
+    array = {2,4,3,7,5};
+    initLinkList(L, true);
+    insertArrayIntoList(array, L, true);
+    printElemt(L, true);
+    resolvedList(L);
+    cout << "2.11-----------------" <<endl;
+    array = {2,4,3,7,5};
+    initLinkList(L, true);
+    insertArrayIntoList(array, L, true);
+    printElemt(L, true);
+    resolvedListByDesc(L);
 }
