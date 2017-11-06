@@ -9,10 +9,7 @@
 #ifndef SQListHeader_h
 #define SQListHeader_h
 
-#include<stdio.h>
-#include<iostream>
-#include<vector>
-using namespace std;
+#include "CommonHeader.h"
 
 #define MAXSIZE 1000
 
@@ -26,7 +23,28 @@ typedef struct {
 typedef struct LNode{
     int data;
     struct LNode *next;
-}LNode,*LinkList;
+}LNode,*LinkList,*LoopLinkList;
+
+//双链表
+typedef struct DuLNode{
+    int data;
+    struct DuLNode *prior;
+    struct DuLNode *next;
+}DuLNode,*DuLinkList;
+
+//双链表带频度
+typedef struct DuLFNode{
+    int data;
+    int fre;
+    struct DuLFNode *prior;
+    struct DuLFNode *next;
+}DuLFNode,*DuFLinkList;
+
+//带头结点的循环双链表
+typedef struct {
+    DuLNode *head;
+    int len;
+}LoopDuLinkList;
 
 #pragma mark 顺序表操作
 int deleminElemt(SqList &L);
@@ -54,6 +72,34 @@ void serchEqualElemt(LinkList &L,LinkList &M);
 void ascendingInputList(LinkList &L);
 void resolvedList(LinkList &L);
 void resolvedListByDesc(LinkList &L);
+void deleEqualElemt(LinkList &L);
+LinkList mergeListAandB(LinkList &L,LinkList &M);
+LinkList serchElemtMergeToC(LinkList &L,LinkList &M);
+void serchElemtMergeToA(LinkList &L,LinkList &M);
+bool BisSubListOfA(LinkList &L,LinkList &M);
+
+#pragma mark 双链表操作
+void initDuFLinkList(DuFLinkList &L);
+void insertInfoDuFLinkList(DuFLinkList &L, int data);
+void sortByFreInDuFLinkList(DuFLinkList &L,DuLFNode *newFre);
+void printElemt(DuFLinkList &L);
+DuLFNode* locateDuFLinkList(DuFLinkList &L,int data);
+
+#pragma mark 循环单链表
+void initLoopLinkList(LoopLinkList &L);
+void insertElemtIntoLoopLinkList(LoopLinkList &L,int data);
+void insertArrayIntoLoopLinkList(vector<int> array,LoopLinkList &L);
+void printElemt(LoopLinkList &L);
+void mergeLoopLinkListBToA(LoopLinkList &L,LoopLinkList &M);
+void loopDeleMinElemtInLoopLinkLkst(LoopLinkList &L);
+
+#pragma mark 双向循环链表
+void initLoopDuLinkList(LoopDuLinkList &L);
+void insertArrayIntoDuLinkList(vector<int> array,LoopDuLinkList &L);
+void insertElemtIntoDuLinkList(LoopDuLinkList &L,int data);
+void printElemt(LoopDuLinkList &L);
+bool LoopDuLinkListIsSymmetry(LoopDuLinkList &L);
+
 
 #pragma mark 通用实现
 void printElemt(SqList &L);

@@ -186,3 +186,209 @@ void resolvedListByDesc(LinkList &L){
     printElemt(sub1, true);
     printElemt(sub2, true);
 }
+
+#pragma mark 12
+//去掉重复的数
+void deleEqualElemt(LinkList &L){
+    LNode *p = L->next;
+    while (p->next!=NULL) {
+        if(p->next->data == p->data){
+            LNode *q = p -> next;
+            p->next = q->next;
+            free(q);
+            L->data--;
+        } else p = p->next;
+    }
+}
+#pragma mark 13
+//两个递增合并成递减
+LinkList mergeListAandB(LinkList &L,LinkList &M){
+    LNode *p = L->next,*q = M->next;
+    LinkList newL;
+    initLinkList(newL, true);
+    while (p->next != NULL || q ->next !=NULL) {
+        if(p->next != NULL && q ->next !=NULL && p->data < q->data){
+            L->next = p->next;
+            LNode *temp = newL->next;
+            newL->next = p;
+            p->next = temp;
+            p = L->next;
+            newL->data++;
+        }else if(p->next != NULL && q ->next !=NULL && p->data >= q->data){
+            L->next = q->next;
+            LNode *temp = newL->next;
+            newL->next = q;
+            q->next = temp;
+            q = L->next;
+            newL->data++;
+        }else if(p->next != NULL){
+            L->next = p->next;
+            LNode *temp = newL->next;
+            newL->next = p;
+            p->next = temp;
+            p = L->next;
+            newL->data++;
+        }else{
+            L->next = q->next;
+            LNode *temp = newL->next;
+            newL->next = q;
+            q->next = temp;
+            q = L->next;
+            newL->data++;
+        }
+    }
+    return newL;
+}
+#pragma mark 14
+//两个递增合找公共合并成C
+LinkList serchElemtMergeToC(LinkList &L,LinkList &M){
+    LinkList C;
+    initLinkList(C, true);
+    LNode *p = L->next,*q = M->next;
+    int flag = 1;
+    while (p != NULL && q != NULL) {
+        if(flag){
+            while (q->data <= p ->data) {
+                if(q->data == p->data){
+                    insertElemtIntoLinkList(C, p->data, true);
+                }
+                q=q->next;
+            }
+            flag = 0;
+            p = p->next;
+        }else {
+            while (p->data <= q ->data) {
+                if(q->data == p->data){
+                    insertElemtIntoLinkList(C, p->data, true);
+                }
+                p=p->next;
+            }
+            flag = 1;
+            q = q->next;
+        }
+    }
+    return C;
+}
+
+#pragma mark 15
+//递增找交集 并存于A中
+void serchElemtMergeToA(LinkList &L,LinkList &M){
+    LNode *p = L,*q = M;
+    while (q->next != NULL || p->next != NULL) {
+        while(p->next != NULL && q->next !=NULL && q->next->data >= p->next->data){
+            if(q->next->data != p->next->data){
+                LNode *dele = p->next;
+                p->next = dele->next;
+                free(dele);
+                L->data--;
+            }
+            p = p->next;
+        }
+        if(q -> next == NULL && p ->next != NULL){
+            LNode *dele = p->next;
+            p->next = dele->next;
+            free(dele);
+            L->data--;
+        }
+        if(q -> next != NULL) q=q->next;
+    }
+}
+
+#pragma mark 16
+//b是不是A的连续子序列
+bool BisSubListOfA(LinkList &L,LinkList &M){
+    LNode *p = L->next,*q = M->next;
+    while(p->next != NULL){
+        LNode *sub = p;
+        LNode *subq = q;
+        while(subq != NULL){
+            if(subq->data == sub->data){
+                sub=sub->next;
+                subq=subq->next;
+            }else break;
+        }
+        if(subq == NULL) return true;
+        p=p->next;
+    }
+    return false;
+}
+#pragma mark 17
+//循环双链表是不是对称
+bool LoopDuLinkListIsSymmetry(LoopDuLinkList &L){
+    DuLNode *p = L.head->next;
+    while (p->next != L.head) {
+        p = p->next;
+    }
+    DuLNode *q = L.head->next;
+    while (q->next != L.head) {
+        if(q->data != p->data) return false;
+        q=q->next;
+        p=p->prior;
+    }
+    return true;
+}
+#pragma mark 18
+//合并两条循环单链表
+void mergeLoopLinkListBToA(LoopLinkList &L,LoopLinkList &M){
+    LNode *p = L->next,*q = M->next;
+    while (p->next != L) {
+        p = p->next;
+    }
+    p->next = q;
+    while (q->next != M) {
+        q = q->next;
+    }
+    q->next = L;
+}
+#pragma mark 19
+//循环删除循环单链表中最小值并输出
+void loopDeleMinElemtInLoopLinkLkst(LoopLinkList &L){
+    while(L != NULL){
+        LNode *p = L->next,*min = L->next,*minPor = L;
+        while(p->next!=L){
+            if(p->next->data < min->data){
+                min = p->next;
+                minPor = p;
+            }
+            p=p->next;
+        }
+        minPor -> next = min->next;
+        cout<<min->data<<"->";
+        if(min != L) free(min);
+        if(L->next == L) {free(L);break;}
+    }
+    cout<<"end"<<endl;
+}
+#pragma mark 20
+//根据访问频度排序
+DuLFNode* locateDuFLinkList(DuFLinkList &L,int data){
+    DuLFNode *p = L->next;
+    while(p != NULL){
+        if(p->data == data) break;
+        p = p->next;
+    }
+    p->fre++;
+    cout<<"访问了:"<<p->data<<"频度:"<<p->fre<<endl;
+    sortByFreInDuFLinkList(L, p);
+    
+    return p;
+}
+void sortByFreInDuFLinkList(DuFLinkList &L,DuLFNode *newFre){
+    DuLFNode *p = L->next;
+    while (p != NULL) {
+        DuLFNode *q = p->next;
+        while (q->next != NULL) {
+            if(q->fre > p->fre ||(p==newFre && q->fre == p->fre)){
+                DuLFNode *pre = p -> prior;
+                pre -> next = q;
+                q -> prior = pre;
+                DuLFNode *next = q->next;
+                q ->next = p;
+                p -> prior = q;
+                p ->next = next;
+            }
+            q=q->next;
+        }
+        p = p->next;
+    }
+}

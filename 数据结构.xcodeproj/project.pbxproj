@@ -10,8 +10,15 @@
 		4B21AC621F29EF8E0044B013 /* excise1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AC611F29EF8E0044B013 /* excise1.cpp */; };
 		4B21AC661F29F36D0044B013 /* SQList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AC651F29F36D0044B013 /* SQList.cpp */; };
 		4B34A8001F3471A500D6A796 /* excise2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B34A7FF1F3471A500D6A796 /* excise2.cpp */; };
+		4B3729521FA1DFE600D130B8 /* SortWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B3729501FA1DFE600D130B8 /* SortWork.cpp */; };
+		4B3729551FA1E01700D130B8 /* SortHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B3729531FA1E01700D130B8 /* SortHeader.cpp */; };
+		4B3C82D31F8E1A9A00B5874A /* StackWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C82D11F8E1A9A00B5874A /* StackWork.cpp */; };
+		4B4A632C1F96F85F00894784 /* TreeHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A632A1F96F85F00894784 /* TreeHeader.cpp */; };
+		4B4A632F1F96FBF300894784 /* TreeWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A632D1F96FBF300894784 /* TreeWork.cpp */; };
 		4B4C57AF1E9F7778004D5EFC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C57AE1E9F7778004D5EFC /* main.cpp */; };
-		4B4C57B81E9F77D8004D5EFC /* KMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C57B71E9F77D8004D5EFC /* KMP.cpp */; };
+		4B4D7CA01F9DEDC000FC2A88 /* MapWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D7C9E1F9DEDC000FC2A88 /* MapWork.cpp */; };
+		4B6709021F90724800A9FB18 /* StackHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B6709011F90724800A9FB18 /* StackHeader.cpp */; };
+		4B6709051F90B21600A9FB18 /* QueueHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B6709031F90B21600A9FB18 /* QueueHeader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,10 +38,27 @@
 		4B21AC611F29EF8E0044B013 /* excise1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = excise1.cpp; sourceTree = "<group>"; };
 		4B21AC651F29F36D0044B013 /* SQList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SQList.cpp; sourceTree = "<group>"; };
 		4B34A7FF1F3471A500D6A796 /* excise2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = excise2.cpp; sourceTree = "<group>"; };
+		4B3729501FA1DFE600D130B8 /* SortWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SortWork.cpp; sourceTree = "<group>"; };
+		4B3729511FA1DFE600D130B8 /* SortWork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SortWork.hpp; sourceTree = "<group>"; };
+		4B3729531FA1E01700D130B8 /* SortHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SortHeader.cpp; sourceTree = "<group>"; };
+		4B3729541FA1E01700D130B8 /* SortHeader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SortHeader.hpp; sourceTree = "<group>"; };
+		4B3C82D11F8E1A9A00B5874A /* StackWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StackWork.cpp; sourceTree = "<group>"; };
+		4B3C82D21F8E1A9A00B5874A /* StackWork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StackWork.hpp; sourceTree = "<group>"; };
+		4B496CC91FA08BB5007B8B19 /* KMP.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KMP.cpp; sourceTree = "<group>"; };
+		4B496CCA1FA08BB5007B8B19 /* KMP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMP.h; sourceTree = "<group>"; };
+		4B4A632A1F96F85F00894784 /* TreeHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeHeader.cpp; sourceTree = "<group>"; };
+		4B4A632B1F96F85F00894784 /* TreeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeHeader.h; sourceTree = "<group>"; };
+		4B4A632D1F96FBF300894784 /* TreeWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeWork.cpp; sourceTree = "<group>"; };
+		4B4A632E1F96FBF300894784 /* TreeWork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreeWork.hpp; sourceTree = "<group>"; };
 		4B4C57AB1E9F7778004D5EFC /* 数据结构 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "数据结构"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4C57AE1E9F7778004D5EFC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		4B4C57B61E9F77C6004D5EFC /* KMP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMP.h; sourceTree = "<group>"; };
-		4B4C57B71E9F77D8004D5EFC /* KMP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KMP.cpp; sourceTree = "<group>"; };
+		4B4D7C9E1F9DEDC000FC2A88 /* MapWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapWork.cpp; sourceTree = "<group>"; };
+		4B4D7C9F1F9DEDC000FC2A88 /* MapWork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MapWork.hpp; sourceTree = "<group>"; };
+		4B6708FF1F906EBF00A9FB18 /* StackHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackHeader.h; sourceTree = "<group>"; };
+		4B6709001F90701100A9FB18 /* CommonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonHeader.h; sourceTree = "<group>"; };
+		4B6709011F90724800A9FB18 /* StackHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StackHeader.cpp; sourceTree = "<group>"; };
+		4B6709031F90B21600A9FB18 /* QueueHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QueueHeader.cpp; sourceTree = "<group>"; };
+		4B6709041F90B21600A9FB18 /* QueueHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +83,51 @@
 			path = "第二章 线性表";
 			sourceTree = "<group>";
 		};
+		4B37294F1FA1DFD700D130B8 /* 第七章 排序 */ = {
+			isa = PBXGroup;
+			children = (
+				4B3729541FA1E01700D130B8 /* SortHeader.hpp */,
+				4B3729531FA1E01700D130B8 /* SortHeader.cpp */,
+				4B3729511FA1DFE600D130B8 /* SortWork.hpp */,
+				4B3729501FA1DFE600D130B8 /* SortWork.cpp */,
+			);
+			path = "第七章 排序";
+			sourceTree = "<group>";
+		};
+		4B3C82D01F8E1A4100B5874A /* 第三章 栈和队列 */ = {
+			isa = PBXGroup;
+			children = (
+				4B6708FF1F906EBF00A9FB18 /* StackHeader.h */,
+				4B6709011F90724800A9FB18 /* StackHeader.cpp */,
+				4B6709041F90B21600A9FB18 /* QueueHeader.h */,
+				4B6709031F90B21600A9FB18 /* QueueHeader.cpp */,
+				4B3C82D21F8E1A9A00B5874A /* StackWork.hpp */,
+				4B3C82D11F8E1A9A00B5874A /* StackWork.cpp */,
+			);
+			path = "第三章 栈和队列";
+			sourceTree = "<group>";
+		};
+		4B496CC81FA08BB5007B8B19 /* 第六章 查找 */ = {
+			isa = PBXGroup;
+			children = (
+				4B496CCA1FA08BB5007B8B19 /* KMP.h */,
+				4B496CC91FA08BB5007B8B19 /* KMP.cpp */,
+			);
+			name = "第六章 查找";
+			path = "数据结构/第六章 查找";
+			sourceTree = SOURCE_ROOT;
+		};
+		4B4A63291F96F84400894784 /* 第四章 树 */ = {
+			isa = PBXGroup;
+			children = (
+				4B4A632B1F96F85F00894784 /* TreeHeader.h */,
+				4B4A632A1F96F85F00894784 /* TreeHeader.cpp */,
+				4B4A632E1F96FBF300894784 /* TreeWork.hpp */,
+				4B4A632D1F96FBF300894784 /* TreeWork.cpp */,
+			);
+			path = "第四章 树";
+			sourceTree = "<group>";
+		};
 		4B4C57A21E9F7778004D5EFC = {
 			isa = PBXGroup;
 			children = (
@@ -78,20 +147,25 @@
 		4B4C57AD1E9F7778004D5EFC /* 数据结构 */ = {
 			isa = PBXGroup;
 			children = (
+				4B6709001F90701100A9FB18 /* CommonHeader.h */,
 				4B4C57AE1E9F7778004D5EFC /* main.cpp */,
 				4B21AC5C1F29E64F0044B013 /* 第二章 线性表 */,
-				4B4C57B51E9F77A2004D5EFC /* 第四章 串 */,
+				4B3C82D01F8E1A4100B5874A /* 第三章 栈和队列 */,
+				4B4A63291F96F84400894784 /* 第四章 树 */,
+				4B4D7C9D1F9DEDA500FC2A88 /* 第五章 图 */,
+				4B496CC81FA08BB5007B8B19 /* 第六章 查找 */,
+				4B37294F1FA1DFD700D130B8 /* 第七章 排序 */,
 			);
 			path = "数据结构";
 			sourceTree = "<group>";
 		};
-		4B4C57B51E9F77A2004D5EFC /* 第四章 串 */ = {
+		4B4D7C9D1F9DEDA500FC2A88 /* 第五章 图 */ = {
 			isa = PBXGroup;
 			children = (
-				4B4C57B61E9F77C6004D5EFC /* KMP.h */,
-				4B4C57B71E9F77D8004D5EFC /* KMP.cpp */,
+				4B4D7C9F1F9DEDC000FC2A88 /* MapWork.hpp */,
+				4B4D7C9E1F9DEDC000FC2A88 /* MapWork.cpp */,
 			);
-			path = "第四章 串";
+			path = "第五章 图";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +225,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B4C57B81E9F77D8004D5EFC /* KMP.cpp in Sources */,
+				4B3729551FA1E01700D130B8 /* SortHeader.cpp in Sources */,
+				4B4D7CA01F9DEDC000FC2A88 /* MapWork.cpp in Sources */,
+				4B4A632F1F96FBF300894784 /* TreeWork.cpp in Sources */,
+				4B4A632C1F96F85F00894784 /* TreeHeader.cpp in Sources */,
 				4B21AC661F29F36D0044B013 /* SQList.cpp in Sources */,
+				4B3C82D31F8E1A9A00B5874A /* StackWork.cpp in Sources */,
 				4B34A8001F3471A500D6A796 /* excise2.cpp in Sources */,
+				4B6709021F90724800A9FB18 /* StackHeader.cpp in Sources */,
 				4B4C57AF1E9F7778004D5EFC /* main.cpp in Sources */,
+				4B3729521FA1DFE600D130B8 /* SortWork.cpp in Sources */,
+				4B6709051F90B21600A9FB18 /* QueueHeader.cpp in Sources */,
 				4B21AC621F29EF8E0044B013 /* excise1.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

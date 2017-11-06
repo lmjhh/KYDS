@@ -8,7 +8,7 @@
 
 #ifndef KMP_h
 #define KMP_h
-#include "SQListHeader.h"
+#include "common"
 
 int KMP(char M[],char N[]);
 

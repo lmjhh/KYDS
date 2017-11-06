@@ -6,13 +6,44 @@
 //  Copyright © 2017年 黄人煌. All rights reserved.
 //
 #include "SQListHeader.h"
+#include "TreeWork.hpp"
+#include "StackWork.hpp"
+#include "MapWork.hpp"
+#include "SortWork.hpp"
+
+#define STACK 0
+#define TREE 0
+#define MAP 0
+#define Sort 1
 
 void sqlistFun();
 void linkListFun();
 
 int main(int argc, const char * argv[]) {
+    if(STACK) StackFunctionRun();
+    if(TREE) TreeFunctionRun();
+    if(MAP) MapFunctionRun();
+    if(Sort) SortFunctionRun();
 //    sqlistFun();
-    linkListFun();
+//    linkListFun();
+//    int num[20] = {1,2,3,4,5,6,7,8,9,10,11,13,14,15,18,20};
+//    int key = 18;
+//    int height = 15,low = 0;
+//    int mid = (height + low) / 2;
+//    while(height >= low){
+//        if(num[mid] == key) {
+//            printf("1\n");
+//            break;
+//        };
+//        if(num[mid] < key){
+//            low = mid + 1;
+//        }else{
+//            height = mid - 1;
+//        }
+//    }
+    
+    
+    return 0;
 }
 
 #pragma mark 第二章线性表
@@ -203,4 +234,87 @@ void linkListFun(){
     insertArrayIntoList(array, L, true);
     printElemt(L, true);
     resolvedListByDesc(L);
+    cout << "2.12-----------------" <<endl;
+    array = {7,10,10,21,30,42,42,42,51,70};
+    initLinkList(L, true);
+    insertArrayIntoList(array, L, true);
+    printElemt(L, true);
+    deleEqualElemt(L);
+    printElemt(L,true);
+    cout << "2.13-----------------" <<endl;
+    array = {2,3,4,5,7};
+    array2 = {1,3,5,7,9,11,13};
+    initLinkList(L, true);
+    initLinkList(M, true);
+    insertArrayIntoList(array, L, true);
+    insertArrayIntoList(array2, M, true);
+    LinkList LB = mergeListAandB(L, M);
+    printElemt(LB,true);
+    cout << "2.14-----------------" <<endl;
+    array = {2,3,4,5,7};
+    array2 = {1,3,5,7,9,11,13};
+    initLinkList(L, true);
+    initLinkList(M, true);
+    insertArrayIntoList(array, L, true);
+    insertArrayIntoList(array2, M, true);
+    LB = serchElemtMergeToC(L, M);
+    printElemt(LB,true);
+    cout << "2.15-----------------" <<endl;
+    array = {2,3,4,5,7};
+    array2 = {1,3,5,7,9,11,13};
+    initLinkList(L, true);
+    initLinkList(M, true);
+    insertArrayIntoList(array, L, true);
+    insertArrayIntoList(array2, M, true);
+    serchElemtMergeToA(L, M);
+    printElemt(L,true);
+    cout << "2.16-----------------" <<endl;
+    array2 = {3,5,7,9,11};
+    array = {1,3,5,7,9,11,13};
+    initLinkList(L, true);
+    initLinkList(M, true);
+    insertArrayIntoList(array, L, true);
+    insertArrayIntoList(array2, M, true);
+    printElemt(L,true);
+    printElemt(M,true);
+    if(BisSubListOfA(L, M)) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+    cout << "2.17-----------------" <<endl;
+    LoopDuLinkList LDL;
+    initLoopDuLinkList(LDL);
+    array = {1,6,5,4,5,6,7};
+    insertArrayIntoDuLinkList(array, LDL);
+    printElemt(LDL);
+    if(LoopDuLinkListIsSymmetry(LDL)) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+    cout << "2.18-----------------" <<endl;
+    LoopLinkList LL,LM;
+    initLoopLinkList(LL);
+    initLoopLinkList(LM);
+    array = {1,6,5,4,5,6,7};
+    array2 = {9,10,11,12,13,14};
+    insertArrayIntoLoopLinkList(array, LL);
+    insertArrayIntoLoopLinkList(array2, LM);
+    printElemt(LL);
+    printElemt(LM);
+    mergeLoopLinkListBToA(LL, LM);
+    printElemt(LL);
+    cout << "2.19-----------------" <<endl;
+    initLoopLinkList(LL);
+    array = {1,6,5,4,5,6,7};
+    insertArrayIntoLoopLinkList(array, LL);
+    printElemt(LL);
+    loopDeleMinElemtInLoopLinkLkst(LL);
+    cout << "2.20-----------------" <<endl;
+    DuFLinkList DFL;
+    initDuFLinkList(DFL);
+    insertInfoDuFLinkList(DFL, 1);
+    insertInfoDuFLinkList(DFL, 2);
+    insertInfoDuFLinkList(DFL, 3);
+    insertInfoDuFLinkList(DFL, 4);
+    insertInfoDuFLinkList(DFL, 5);
+    printElemt(DFL);
+    DuLFNode* du = locateDuFLinkList(DFL, 3);
+    printElemt(DFL);
+    
 }
