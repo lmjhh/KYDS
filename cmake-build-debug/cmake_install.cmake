@@ -1,4 +1,4 @@
-# Install script for directory: /Users/huangrenhuang/ND/KYDS
+# Install script for directory: /Users/MyData/Documents/考研/计算机基础综合/数据结构/Code
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/huangrenhuang/ND/KYDS/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/MyData/Documents/考研/计算机基础综合/数据结构/Code/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
