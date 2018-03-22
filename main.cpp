@@ -1,6 +1,6 @@
-#include <iostream>
+#include "./第一章 绪论/Practice1.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+//    runPractice1();
     return 0;
 }
