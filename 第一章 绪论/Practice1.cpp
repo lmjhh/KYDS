@@ -30,24 +30,24 @@ int practice1_17(int k,int m){
         return value;
     }
     //标答
-    int Fibonacci(int k,int n)
-    {
-        if(k<1) exit(OVERFLOW);
-        int *p,x;
-        p=new int[k+1];
-        if(!p) exit(OVERFLOW);
-        int i,j;
-        for(i=0;i<k+1;i++){
-            if(i<k-1) p[i]=0;
-            else p[i]=1;
-        }
-        for(i=k+1;i<n+1;i++){
-            x=p[0];
-            for(j=0;j<k;j++) p[j]=p[j+1];
-            p[k]=2*p[k-1]-x;
-        }
-        return p[k];
-    }
+//    int Fibonacci(int k,int n)
+//    {
+//        if(k<1) exit(OVERFLOW);
+//        int *p,x;
+//        p=new int[k+1];
+//        if(!p) exit(OVERFLOW);
+//        int i,j;
+//        for(i=0;i<k+1;i++){
+//            if(i<k-1) p[i]=0;
+//            else p[i]=1;
+//        }
+//        for(i=k+1;i<n+1;i++){
+//            x=p[0];
+//            for(j=0;j<k;j++) p[j]=p[j+1];
+//            p[k]=2*p[k-1]-x;
+//        }
+//        return p[k];
+//    }
 }
 
 /*
@@ -69,8 +69,7 @@ typedef struct{
     int TotalSum; //团体总分
 } Sum;
 
-Sum SumScore(SchoolName sn,Component a[],int n)
-{
+Sum SumScore(SchoolName sn,Component a[],int n) {
     Sum temp;
     temp.MaleSum=0;
     temp.FemaleSum=0;
@@ -118,6 +117,7 @@ int practice1_20(int array[],int x,int n){
 
     //时间复杂度O(n)
 }
+
 void runPractice1(){
     practice1_16(2,1,3);
     cout<<practice1_17(2,4)<<endl;

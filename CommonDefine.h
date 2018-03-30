@@ -21,7 +21,7 @@ using namespace std;
 //#define OVERFLOW    -2 已有定义为3
 typedef int Status;
 typedef int Bool;
-
+typedef int ElemType;
 
 #endif //KYDS_COMMONDEFINE_H
 
