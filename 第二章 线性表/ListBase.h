@@ -9,6 +9,7 @@
 
 
 class ListBase {
+
 public:
     ListBase();
     Status ClearList();
