@@ -1,16 +1,16 @@
 //
 // Created by 黄人煌 on 2018/3/22.
 //
-#include "Practice1.h"
+#include "../Include/Practice1.h"
 
 /*
  * 试写一算法，自大至小依次输出顺序读入的三个整数 X，Y 和 Z 的值
  */
-void practice1_16(int x,int y,int z){
-    if(x < y) swap(x,y);
-    if(x < z) swap(x,z);
-    if(y < z) swap(y,z);
-    cout<<x<<">"<<y<<">"<<z<<endl;
+void practice1_16(int x, int y, int z) {
+    if (x < y) swap(x, y);
+    if (x < z) swap(x, z);
+    if (y < z) swap(y, z);
+    cout << x << ">" << y << ">" << z << endl;
 }
 
 /*
@@ -19,14 +19,14 @@ void practice1_16(int x,int y,int z){
  * 试编写求 k 阶斐波那契序列的第 m 项值的函数算法，k 和 m 均以值调用的形式在函数参数表中出现。
  */
 
-int practice1_17(int k,int m){
-    if(m < k - 1) {
+int practice1_17(int k, int m) {
+    if (m < k - 1) {
         return 0;
-    }else if(m == k - 1){
+    } else if (m == k - 1) {
         return 1;
-    }else {
-        int value = practice1_17(k,m-k);
-        for(int i = 1; i < k; i++) value += practice1_17(k,m - i);
+    } else {
+        int value = practice1_17(k, m - k);
+        for (int i = 1; i < k; i++) value += practice1_17(k, m - i);
         return value;
     }
     //标答
@@ -55,32 +55,37 @@ int practice1_17(int k,int m){
  * 项目名称 性别 校名 成绩 得分
  */
 
-typedef enum {A,B,C,D,E} SchoolName;
-typedef enum {Female,Male} SexType;
+typedef enum {
+    A, B, C, D, E
+} SchoolName;
+typedef enum {
+    Female, Male
+} SexType;
 typedef struct {
     char event[3]; //项目
     SexType sex;
     SchoolName school;
     int score;
 } Component;
-typedef struct{
+typedef struct {
     int MaleSum;  //男团总分
     int FemaleSum;//女团总分
     int TotalSum; //团体总分
 } Sum;
 
-Sum SumScore(SchoolName sn,Component a[],int n) {
+Sum SumScore(SchoolName sn, Component a[], int n) {
     Sum temp;
-    temp.MaleSum=0;
-    temp.FemaleSum=0;
-    temp.TotalSum=0;
+    temp.MaleSum = 0;
+    temp.FemaleSum = 0;
+    temp.TotalSum = 0;
     int i;
-    for(i=0;i<n;i++){
-        if(a[i].school==sn){
-            if(a[i].sex==Male) temp.MaleSum+=a[i].score;
-            if(a[i].sex==Female) temp.FemaleSum+=a[i].score;
-        } }
-    temp.TotalSum=temp.MaleSum+temp.FemaleSum;
+    for (i = 0; i < n; i++) {
+        if (a[i].school == sn) {
+            if (a[i].sex == Male) temp.MaleSum += a[i].score;
+            if (a[i].sex == Female) temp.FemaleSum += a[i].score;
+        }
+    }
+    temp.TotalSum = temp.MaleSum + temp.FemaleSum;
     return temp;
 }
 
@@ -91,13 +96,14 @@ Sum SumScore(SchoolName sn,Component a[],int n) {
  */
 int arraySize = 100;
 int maxInt = 65535;
-Status practice1_19(int array[],int n){
-    if(n > arraySize) return OVERFLOW;
-    for(int i = 1; i < arraySize; i++){
+
+Status practice1_19(int array[], int n) {
+    if (n > arraySize) return OVERFLOW;
+    for (int i = 1; i < arraySize; i++) {
         int value = i;
-        for(int j = 1; j < i; j++) value*=i;
-        value *= pow(2,i);
-        if(value > maxInt) return OVERFLOW;
+        for (int j = 1; j < i; j++) value *= i;
+        value *= pow(2, i);
+        if (value > maxInt) return OVERFLOW;
         else array[i] = value;
     }
     return OK;
@@ -108,17 +114,17 @@ Status practice1_19(int array[],int n){
  *  整个算法的时间复杂度。注意选择你认为较好的输入和输出方法。
  *  本题的输入为ai(i = 0,1...n),x0和n,输出为 Pn(x0) 。
  */
-int practice1_20(int array[],int x,int n){
+int practice1_20(int array[], int x, int n) {
     int value = 0;
-    for(int i = 0; i < n; i++){
-        value += array[i] * pow(x,i);
+    for (int i = 0; i < n; i++) {
+        value += array[i] * pow(x, i);
     }
     return value;
 
     //时间复杂度O(n)
 }
 
-void runPractice1(){
-    practice1_16(2,1,3);
-    cout<<practice1_17(2,4)<<endl;
+void runPractice1() {
+    practice1_16(2, 1, 3);
+    cout << practice1_17(2, 4) << endl;
 }

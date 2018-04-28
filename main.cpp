@@ -1,6 +1,7 @@
-#include "./第一章 绪论/Practice1.h"
-
+#include "Include/Practice1.h"
+#include "Include/Practice2.h"
 int main() {
-//    runPractice1();
+//   runPractice1();
+    runPractice2();
     return 0;
 }
